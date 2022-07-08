@@ -12,4 +12,11 @@ async def read_root():
 
 @app.get("/items/{item_id}")
 async def read_item(item_id: int, q: Union[str, None] = None):
+    print("read_item: ", item_id)
+    print("q read_item: ", q)
     return {"item_id": item_id, "q": q}
+
+@app.get('/users/{user_id}')
+async def read_user(user_id: int):
+    return {"user_id": user_id}
+
