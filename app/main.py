@@ -26,7 +26,7 @@ async def read_user(user_id: int):
 @app.get('/datetime2')
 async def set_datetime2():
     return {"datetime2": datetime.now()}
-    
+
 @app.get('/datetime')
 async def set_datetime():
     return {"datetime": datetime.now(tz=pytz.timezone('America/Bogota'))}
