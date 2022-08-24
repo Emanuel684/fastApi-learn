@@ -11,9 +11,9 @@ async def read_root():
     return {"Hola": "Bienvenid@"}
 
 @app.get('/datetime-host')
-async def set_datetime2():
-    return {"datetime2": datetime.now()}
+async def set_datetime_host():
+    return {"datetime-host": datetime.now()}
 
 @app.get('/datetime-pytz')
-async def set_datetime():
-    return {"datetime": datetime.now(tz=pytz.timezone('America/Bogota'))}
+async def set_datetime_pytz():
+    return {"datetime-pytz ": datetime.now(tz=pytz.timezone('America/Bogota'))}
